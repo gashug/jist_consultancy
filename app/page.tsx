@@ -1,65 +1,123 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Hero from "@/components/Hero";
+import Section from "@/components/Section";
+import ServiceCard from "@/components/ServiceCard";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
+import Link from "next/link";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Jist Consultancy | Tax, Accounting & Audit Services in Kenya",
+  description:
+    "Jist Consultancy helps Kenyan SMEs and individuals with KRA tax compliance, accounting, audit advisory and training. Book a free consultation today."
+};
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Hero />
+
+      <Section
+        id="services"
+        eyebrow="Services"
+        title="Practical Compliance & Financial Support for Kenyan Businesses"
+      >
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <ServiceCard
+            title="Tax Advisory & Services"
+            description="Stay on the right side of KRA with timely, accurate tax returns and clear advisory."
+            href="/services/tax-advisory"
+            points={["VAT, PAYE & Income Tax", "KRA iTax filing & support", "Tax health checks"]}
+          />
+          <ServiceCard
+            title="Accounting & Bookkeeping"
+            description="Clean, up-to-date books that help you understand cashflow and make better decisions."
+            href="/services/accounting-bookkeeping"
+            points={["Monthly bookkeeping", "Payroll & PAYE", "Management reports"]}
+          />
+          <ServiceCard
+            title="Audit Advisory & Services"
+            description="Reduce risk with structured internal reviews and audit preparation support."
+            href="/services/audit-advisory"
+            points={["Internal controls review", "Financial statement audits", "Regulatory readiness"]}
+          />
+          <ServiceCard
+            title="Training & Workshops"
+            description="Equip your team with practical skills on iTax, accounting tools and financial basics."
+            href="/services/training"
+            points={["KRA iTax training", "Accounting software", "Financial literacy"]}
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+      </Section>
+
+      <Section
+        eyebrow="Why Jist Consultancy"
+        title="Built for Kenyan SMEs, Startups and Professionals"
+      >
+        <div className="grid gap-6 md:grid-cols-3 text-sm text-slate-700">
+          <div className="rounded-2xl border bg-white p-5">
+            <h3 className="font-semibold text-base">Local Expertise</h3>
+            <p className="mt-2">
+              We focus on Kenyan tax and regulatory requirements — from KRA to NSSF/NHIF
+              and local county obligations.
+            </p>
+          </div>
+          <div className="rounded-2xl border bg-white p-5">
+            <h3 className="font-semibold text-base">Clear Communication</h3>
+            <p className="mt-2">
+              No jargon. We explain what’s happening, what it means, and what to do next
+              in simple language.
+            </p>
+          </div>
+          <div className="rounded-2xl border bg-white p-5">
+            <h3 className="font-semibold text-base">SME-Friendly Pricing</h3>
+            <p className="mt-2">
+              Transparent, predictable fees with clear scope. Ideal for SMEs managing
+              tight budgets and growth.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      <TestimonialCarousel />
+
+      <Section title="Visit or Contact Our Nairobi / Ruiru Office">
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="rounded-2xl border bg-white p-5 text-sm text-slate-700">
+            <h3 className="text-base font-semibold mb-2">Office Details</h3>
+            <p>
+              Ruiru, Eastern Bypass<br />
+              Nairobi Metropolitan, Kenya
+            </p>
+            <p className="mt-2">
+              Phone: <a href="tel:+2547XXXXXXXX">+254 7XX XXX XXX</a><br />
+              Email:{" "}
+              <a href="mailto:info@jistconsultancy.co.ke">
+                info@jistconsultancy.co.ke
+              </a>
+            </p>
+            <p className="mt-2">
+              Hours: Mon – Fri, 8:00am – 5:00pm (EAT)
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex mt-4 rounded-full bg-brand-primary px-4 py-2 text-sm font-medium text-white hover:bg-brand-accent"
+            >
+              Book Your Free Consultation
+            </Link>
+          </div>
+
+          <div className="rounded-2xl overflow-hidden border bg-slate-200 h-72">
+            {/* Replace src with your actual Google Maps embed */}
+            <iframe
+              title="Jist Consultancy Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!..."
+              className="w-full h-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </Section>
+    </>
   );
 }
