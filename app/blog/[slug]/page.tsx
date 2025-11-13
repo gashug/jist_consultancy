@@ -2,19 +2,24 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/lib/blogData";
 
-type Props = { params: { slug: string } };
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
-export function generateMetadata({ params }: Props): Metadata {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
   return {
     title: `${post.title} | Jist Consultancy`,
-    description: post.excerpt
+    description: post.excerpt,
   };
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return notFound();
 
   return (
@@ -24,7 +29,7 @@ export default function BlogPostPage({ params }: Props) {
           {new Date(post.date).toLocaleDateString("en-KE", {
             year: "numeric",
             month: "short",
-            day: "numeric"
+            day: "numeric",
           })}{" "}
           · {post.category}
         </p>
