@@ -1,3 +1,0 @@
-for dir in tax-advisory accounting-bookkeeping audit-advisory training; do
-	touch "$dir/page.tsx"
-done
