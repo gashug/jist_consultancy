@@ -20,7 +20,7 @@ export default function Header() {
     <header className="border-b bg-white sticky top-0 z-40">
       <div className="container flex items-center justify-between py-3">
         <Link href="/" className="flex items-center gap-2">
-          <div className="h-9 w-9 rounded-full bg-brand-primary text-white flex items-center justify-center font-bold">
+          <div className="h-9 w-9 rounded-full bg-brand-primary !text-white flex items-center justify-center font-bold">
             J
           </div>
           <div className="leading-tight">
@@ -76,7 +76,7 @@ export default function Header() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="inline-flex mt-2 rounded-full bg-brand-primary px-4 py-2 text-sm text-white hover:bg-brand-accent"
+              className="inline-flex mt-2 rounded-full bg-brand-primary px-4 py-2 text-sm !text-white hover:bg-brand-accent"
             >
               Consult Us
             </Link>
