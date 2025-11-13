@@ -80,13 +80,13 @@ export default function HomePage() {
 
       <TestimonialCarousel />
 
-      <Section title="Visit or Contact Our Nairobi / Ruiru Office">
+      <Section title="Visit or Contact Our Office">
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border bg-white p-5 text-sm text-slate-700">
             <h3 className="text-base font-semibold mb-2">Office Details</h3>
             <p>
-              Ruiru, Eastern Bypass<br />
-              Nairobi Metropolitan, Kenya
+              Room 15 2nd Floor, Kimondo Ngunju Building<br />
+              Nyeri, Kenya
             </p>
             <p className="mt-2">
               Phone: <a href="tel:+2547XXXXXXXX">+254 7XX XXX XXX</a><br />

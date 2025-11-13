@@ -6,11 +6,11 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Jist Consultancy | Tax, Accounting & Audit Services",
   description: "Jist Consultancy helps Kenyan SMEs and individuals stay compliant with KRA while gaining financial clarity through expert tax, accounting, audit and training services.",
-  metadataBase: new URL("https://"),
+  // metadataBase: new URL("https://"),
   openGraph: {
     title: "Jist Consultancy | Compliance & Financial Clarity",
     description: "Trusted tax, accounting, audit, and training services for Kenyan businesses and individuals.",
-    url: "https://",
+    // url: "https://",
     siteName: "Jist Consultancy",
     locale: "en_KE",
     type: "website",
