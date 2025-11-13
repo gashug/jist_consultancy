@@ -11,7 +11,7 @@ export default function AboutPage() {
     <div className="container py-10 sm:py-16">
       <h1 className="text-3xl font-semibold mb-4">About Jist Consultancy</h1>
       <p className="text-sm text-slate-700 max-w-3xl">
-        Jist Consultancy is a Nairobi- and Ruiru-based professional services firm focused
+        Jist Consultancy is a Nyeri-based professional services firm focused
         on helping Kenyan SMEs, startups and individuals stay compliant with KRA and
         build financially healthy businesses.
       </p>
@@ -53,7 +53,7 @@ export default function AboutPage() {
             <h3 className="font-semibold">[Your Name]</h3>
             <p className="text-xs text-slate-500">Lead Tax &amp; Compliance Advisor</p>
             <p className="mt-2 text-xs text-slate-600">
-              CPA(K) with X+ years of experience supporting SMEs and professionals
+              3+ years of experience supporting SMEs and professionals
               across Kenya with tax planning, advisory and compliance.
             </p>
           </div>

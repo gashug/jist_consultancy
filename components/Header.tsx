@@ -39,9 +39,9 @@ export default function Header() {
           ))}
           <Link
             href="/contact"
-            className="rounded-full bg-brand-primary px-4 py-2 text-sm text-white hover:bg-brand-accent"
+            className="rounded-full bg-brand-primary px-4 py-2 text-sm !text-white hover:bg-brand-accent"
           >
-            Free Consultation
+            Consultation Awaits
           </Link>
         </nav>
 
@@ -78,7 +78,7 @@ export default function Header() {
               onClick={() => setOpen(false)}
               className="inline-flex mt-2 rounded-full bg-brand-primary px-4 py-2 text-sm text-white hover:bg-brand-accent"
             >
-              Free Consultation
+              Consult Us
             </Link>
           </div>
         </div>

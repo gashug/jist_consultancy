@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: "Do you only work with businesses in Nairobi?",
-    a: "We primarily serve clients in Nairobi and its environs (including Ruiru and Thika), but we can support businesses anywhere in Kenya through online consultations and cloud tools."
+    q: "Do you only work with businesses in Nyeri?",
+    a: "We primarily serve clients in Nyeri and its environs (including Othaya and Karatina), but we can support businesses anywhere in Kenya through online consultations and cloud tools."
   },
   {
     q: "Can you help if I have unfiled returns from previous years?",

@@ -16,8 +16,8 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-sm">Contact</h4>
           <p className="mt-2 text-sm text-slate-400">
-            Ruiru, Eastern Bypass<br />
-            Nairobi Metropolitan, Kenya<br />
+            Room 15 2nd Floor, Kimondo Ngunju Building<br />
+            Nyeri, Kenya<br />
             Phone: <a href="tel:+2547XXXXXXXX">+254 7XX XXX XXX</a><br />
             Email: <a href="mailto:info@jistconsultancy.co.ke">info@jistconsultancy.co.ke</a>
           </p>
